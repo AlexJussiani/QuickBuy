@@ -1,0 +1,8 @@
+{
+  "ConnectionStrings": {
+    "SqlServerConnection": "",
+    "QuickBuyDB": "server=localhost;Uid=root;Pwd=admin;database=QuickBuyDB"
+  }
+}
+
+
