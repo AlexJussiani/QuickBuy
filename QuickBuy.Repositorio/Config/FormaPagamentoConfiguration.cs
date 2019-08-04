@@ -1,16 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using QuickBuy.Dominio.ObjetoDeValor;
 
 namespace QuickBuy.Repositorio.Config
 {
-    class FormaPagamentoConfiguration : IEntityTypeConfiguration<UsuaFormaPagamento>
+    class FormaPagamentoConfiguration : IEntityTypeConfiguration<FormaPagamento>
     {
-        public void Configure(EntityTypeBuilder<UsuaFormaPagamento> builder)
+        public void Configure(EntityTypeBuilder<FormaPagamento> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(f => f.id);
+
+            builder
+                .Property(f => f.nome)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder
+                .Property(f => f.nome)
+                .IsRequired()
+                .HasMaxLength(100);
         }
     }
 }

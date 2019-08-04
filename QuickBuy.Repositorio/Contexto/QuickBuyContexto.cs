@@ -25,7 +25,7 @@ namespace QuickBuy.Repositorio.Contexto
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             /// Classes de mapeamento aqui...
-            modelBuilder.ApplyConfiguration(new UsuarioCOnfiguration());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
             modelBuilder.ApplyConfiguration(new ProdutoCOnfiguration());
             modelBuilder.ApplyConfiguration(new PedidoConfiguration());
             modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
