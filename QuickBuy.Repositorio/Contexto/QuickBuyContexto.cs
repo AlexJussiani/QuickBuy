@@ -31,6 +31,27 @@ namespace QuickBuy.Repositorio.Contexto
             modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
             modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration());
 
+            modelBuilder.Entity<FormaPagamento>().HasData(
+                new FormaPagamento()
+                {
+                    id = 1,
+                    nome = "Boleto",
+                    descricao = "Forma de Pagamento Boleto"
+                },
+                new FormaPagamento()
+                {
+                    id = 2,
+                    nome = "Cartão de Crédito",
+                    descricao = "Forma de Pagamento Cartão de Crédito"
+                },
+                new FormaPagamento()
+                {
+                    id = 3,
+                    nome = "Depósito",
+                    descricao = "Forma de Pagamento Depósito"
+                }
+                );
+
             base.OnModelCreating(modelBuilder);
         }
 
