@@ -19,13 +19,33 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\NovaPasta1\**" />
+    <Compile Remove="ClientApp\src\app\NovaPasta2\**" />
+    <Compile Remove="ClientApp\src\app\NovaPasta\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\NovaPasta1\**" />
+    <Content Remove="ClientApp\src\app\NovaPasta2\**" />
+    <Content Remove="ClientApp\src\app\NovaPasta\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\NovaPasta1\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\NovaPasta2\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\NovaPasta\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\NovaPasta1\**" />
+    <None Remove="ClientApp\src\app\NovaPasta2\**" />
+    <None Remove="ClientApp\src\app\NovaPasta\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\produto\produto.componet.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\QuickBuy.Repositorio\QuickBuy.Repositorio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\produto\produto.componet.ts" />
   </ItemGroup>
 
   <ItemGroup>
