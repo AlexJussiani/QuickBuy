@@ -1,7 +1,7 @@
 import { Component } from "@angular/core"
 
 @Component({
-  selector: "produto",
+  selector: "app-produto",
   template: "<html><body>{{ obterNome() }}</body></html>"
 })
 export class ProdutoComponent {// Nome das classes começando com maíusculo por conta da convenção
