@@ -5,26 +5,36 @@
     <input type="email" id="inputEmail"
            name="email" placeholder="Informe o seu email"
            class="form-control mb-2"
+           [ngClass]="{
+            'is-invalid':email.invalid && (email.durty || email.touched),
+            'is-valid':email.valid && (email.durty || email.touched)
+           }"
            [(ngModel)]="usuario.email"
-           #email="ngModel"
+           #email="ngModel"           
            email
            required />
-    <div class="alert alert-danger" *ngIf="email.invalid && (email.durty || email.touched)">
+
+    <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.durty || email.touched)">
       <div *ngIf="email.errors.required">
         Email é de preenchimento obrigatório
       </div>
       <div *ngIf="email.errors.email">
-        Email nao esta no formato correto
+        Email não esta no formato correto
       </div>
     </div>
+
     <label for="inputSenha" class="sr-only">Senha</label>
     <input type="password" id="inputSenha"
            name="senha" placeholder="Senha"
            class="form-control mb-2"
            [(ngModel)]="usuario.senha"
            #senha="ngModel"
+            [ngClass]="{
+            'is-invalid':senha.invalid && (senha.durty || email.touched),
+            'is-valid':senha.valid && (senha.durty || senha.touched)
+           }"           
            required />
-    <div class="alert alert-danger" *ngIf="senha.invalid && (senha.durty || senha.touched)">
+    <div class="invalid-feedback mb-2" *ngIf="senha.invalid && (senha.durty || senha.touched)">
       <div *ngIf="senha.errors.required">
         Senha deve ser Preenchido
       </div>
