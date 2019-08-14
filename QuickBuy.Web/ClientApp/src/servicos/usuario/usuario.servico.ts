@@ -1,7 +1,6 @@
 import { Injectable, Inject } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { getBaseUrl } from "../../main";
 import { Usuario } from "../../app/modelo/usuario";
 
 @Injectable({
@@ -21,7 +20,7 @@ export class UsuarioServico {
       senha: usuario.senha
     }
 
-    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers })
+    return this.http.post<Usuario>(this.baseURL + "api/usuario/VerificarUsuario", body, { headers })
 }
 }
 
