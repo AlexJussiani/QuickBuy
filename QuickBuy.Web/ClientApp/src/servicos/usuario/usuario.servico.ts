@@ -17,13 +17,18 @@ export class UsuarioServico {
   }
 
   get usuario(): Usuario {
-    let usuario_json = sessionStorage.getItem("suario-autenticado");
+    let usuario_json = sessionStorage.getItem("usuario-autenticado");
     this._usuario = JSON.parse(usuario_json);
     return this._usuario;
   }
 
   public usuario_autenticado(): boolean {
-    return this._usuario != null;
+    return this._usuario != null && this.usuario.email != "" && this.usuario.senha != "";
+  }
+
+  public limpar_sessao() {
+    sessionStorage.setItem("usuario-autenticado", "");
+    this._usuario = null;
   }
 
   constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
