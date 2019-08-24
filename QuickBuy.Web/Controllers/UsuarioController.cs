@@ -32,7 +32,7 @@ namespace QuickBuy.Web.Controllers
         {
             try
             {
-                var usuarioRetorno = _usuarioRepositorio.Obter(usuario.email, usuario.senha);
+                var usuarioRetorno = _usuarioRepositorio.Obter(usuario.email);
                 if (usuarioRetorno != null)
                     return Ok(usuarioRetorno);
                 else return BadRequest("Usuário ou senha inválido");
@@ -45,10 +45,15 @@ namespace QuickBuy.Web.Controllers
 
 
         [HttpPost]
-        public ActionResult Post()
+        public ActionResult Post([FromBody] Usuario usuario)
         {
+            
             try
-            {
+            {                
+                var usuarioCadastrado = _usuarioRepositorio.Obter(usuario.email);
+                if (usuarioCadastrado != null)
+                    return BadRequest("Usuário já cadastrado no sistema");
+                _usuarioRepositorio.Adicionar(usuario);
                 return Ok();
             }
             catch (Exception ex)
