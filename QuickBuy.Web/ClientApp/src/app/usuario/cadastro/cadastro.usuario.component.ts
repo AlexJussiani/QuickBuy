@@ -25,6 +25,7 @@ export class CadastroUsuarioComponent implements OnInit {
 
   public cadastrar() {
     this.ativar_spinner = true;
+    
     this.usuarioServico.cadastrarUsuario(this.usuario)
       .subscribe(
         usuariojson => {
@@ -36,6 +37,7 @@ export class CadastroUsuarioComponent implements OnInit {
         e => {
           this.mensagem = e.error;
           this.ativar_spinner = false;
+          console.log(e.error + " teste Alex");
         }
       );
   }
