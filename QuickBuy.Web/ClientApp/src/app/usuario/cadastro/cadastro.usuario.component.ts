@@ -37,7 +37,6 @@ export class CadastroUsuarioComponent implements OnInit {
         e => {
           this.mensagem = e.error;
           this.ativar_spinner = false;
-          console.log(e.error + " teste Alex");
         }
       );
   }
