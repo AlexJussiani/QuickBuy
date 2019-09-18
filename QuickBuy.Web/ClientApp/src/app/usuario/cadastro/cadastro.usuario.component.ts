@@ -11,7 +11,7 @@ import { UsuarioServico } from "../../../servicos/usuario/usuario.servico";
 export class CadastroUsuarioComponent implements OnInit {
    
   public usuario: Usuario;
-  public ativar_spinner: boolean
+  public ativar_spinner: boolean;
   public mensagem: string;
   public usuarioCadastrado: boolean;
 
