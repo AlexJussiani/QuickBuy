@@ -46,8 +46,7 @@ namespace QuickBuy.Web.Controllers
 
         [HttpPost]
         public ActionResult Post([FromBody] Usuario usuario)
-        {
-            
+        {            
             try
             {                
                 var usuarioCadastrado = _usuarioRepositorio.Obter(usuario.email);

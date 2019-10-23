@@ -17,6 +17,7 @@ export class UsuarioServico {
   private baseURL: string;
   private _usuario: Usuario;
 
+
   set usuario(usuario: Usuario) {
     sessionStorage.setItem("usuario-autenticado", JSON.stringify(usuario));
     this._usuario = usuario;
