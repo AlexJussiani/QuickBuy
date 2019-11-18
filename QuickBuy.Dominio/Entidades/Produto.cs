@@ -11,6 +11,8 @@ namespace QuickBuy.Dominio.Entidades
         public string descricao { get; set; }
         public decimal preco { get; set; }
 
+        public string nomeArquivo { get; set; }
+
         public override void Validate()
         {
             throw new NotImplementedException();
