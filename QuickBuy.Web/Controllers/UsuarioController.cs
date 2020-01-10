@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using QuickBuy.Dominio.Contrato;
 using QuickBuy.Dominio.Entidades;
 using System;
