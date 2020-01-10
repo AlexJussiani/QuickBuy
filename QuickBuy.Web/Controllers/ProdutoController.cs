@@ -17,7 +17,7 @@ namespace QuickBuy.Web.Controllers
         private readonly IProdutoRepositorio _produtoRepositorio;
         private IHttpContextAccessor _httpContextAcessor;
         private IHostingEnvironment _hostingEnvironment;
-        public ProdutoController(IProdutoRepositorio produtoRepositorio, 
+        public ProdutoController(IProdutoRepositorio produtoRepositorio,
                                     IHttpContextAccessor httpContextAccessor,
                                     IHostingEnvironment hostingEnvironment)
         {
@@ -36,14 +36,14 @@ namespace QuickBuy.Web.Controllers
                 //{
                 //    return BadRequest("")
                 // }
-            }catch(Exception ex)
+            } catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }
         }
 
-        [HttpPost]
-        public IActionResult Post([FromBody] Produto produto)
+        [HttpPost("Cadastrar")]
+        public IActionResult Cadastrar([FromBody] Produto produto)
         {
             try
             {

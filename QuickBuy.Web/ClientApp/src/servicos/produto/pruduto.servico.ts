@@ -3,6 +3,12 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Produto } from "../../app/modelo/produto";
 
+const httpOptions = {
+    headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+    })
+};
+
 @Injectable({
   providedIn: "root"
 })
@@ -23,13 +29,13 @@ export class ProdutoServico implements OnInit {
     return new HttpHeaders().set('content-type', 'applicaton/json')
   }
 
-  public cadastrar(produto: Produto): Observable<Produto> {
-    return this.http.post<Produto>(this._baseUrl + "api/produto", JSON.stringify(produto), { headers: this.headers });
+    public cadastrar(produto: Produto): Observable<Produto> {
+        return this.http.post<Produto>(this._baseUrl + "api/usuario", JSON.stringify(produto), httpOptions);
   }
 
   public salvar(produto: Produto): Observable<Produto> {
 
-    return this.http.post<Produto>(this._baseUrl + "api/produto/salvar", JSON.stringify(produto), { headers: this.headers });
+      return this.http.post<Produto>(this._baseUrl + "api/produto/salvar", JSON.stringify(produto), httpOptions);
   }
 
   public deletar(produto: Produto): Observable<Produto> {
