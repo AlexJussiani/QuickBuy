@@ -30,7 +30,7 @@ export class ProdutoServico implements OnInit {
   }
 
     public cadastrar(produto: Produto): Observable<Produto> {
-        return this.http.post<Produto>(this._baseUrl + "api/usuario", JSON.stringify(produto), httpOptions);
+        return this.http.post<Produto>(this._baseUrl + "api/produto", JSON.stringify(produto), httpOptions);
   }
 
   public salvar(produto: Produto): Observable<Produto> {
@@ -38,9 +38,9 @@ export class ProdutoServico implements OnInit {
       return this.http.post<Produto>(this._baseUrl + "api/produto/salvar", JSON.stringify(produto), httpOptions);
   }
 
-  public deletar(produto: Produto): Observable<Produto> {
+  public deletar(produto: Produto): Observable<Produto[]> {
  
-    return this.http.post<Produto>(this._baseUrl + "api/produto/deletar", JSON.stringify(produto), { headers: this.headers });
+      return this.http.post<Produto[]>(this._baseUrl + "api/produto/deletar", JSON.stringify(produto), httpOptions);
   }
 
   public obterTodosProdutos(): Observable<Produto[]> {
