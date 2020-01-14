@@ -7,25 +7,27 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { ProdutoComponent } from './produto/produto.componet'
+import { LancheComponent } from './lanches/lanche.componet'
 import { LoginComponent } from './usuario/login/login.componet';
 import { GuardaRotas } from './autorizacao/guarda.rotas';
 import { UsuarioServico } from '../servicos/usuario/usuario.servico';
 import { CadastroUsuarioComponent } from './usuario/cadastro/cadastro.usuario.component';
-import { ProdutoServico } from '../servicos/produto/pruduto.servico';
-import { PesquisaProdutoComponent } from './produto/pesquisa/pesquisa.produto.component';
+import { LancheServico } from '../servicos/lanche/lanche.servico';
+import { PesquisaProdutoComponent } from './lanches/pesquisa/pesquisa.lanche.component';
 import { LojaPesquisaComponent } from './loja/pesquisa/loja.pesquisa.component';
+import { IngredienteComponent } from './ingrediente/ingrediente.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    ProdutoComponent,
+    LancheComponent,
     LoginComponent,
     CadastroUsuarioComponent,
     PesquisaProdutoComponent,
-    LojaPesquisaComponent
+    LojaPesquisaComponent,
+    IngredienteComponent
     
   ],
   imports: [
@@ -34,13 +36,14 @@ import { LojaPesquisaComponent } from './loja/pesquisa/loja.pesquisa.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'produto', component: ProdutoComponent},
+      { path: 'lanche', component: LancheComponent},
       { path: 'entrar', component: LoginComponent },
       { path: 'novo-usuario', component: CadastroUsuarioComponent },
-      { path: 'pesquisar-produto', component: PesquisaProdutoComponent }
+      { path: 'pesquisar-lanche', component: PesquisaProdutoComponent },
+      { path: 'ingrediente', component: IngredienteComponent }
     ])
-  ],
-  providers: [UsuarioServico, ProdutoServico],
+    ],
+    providers: [UsuarioServico, LancheServico],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

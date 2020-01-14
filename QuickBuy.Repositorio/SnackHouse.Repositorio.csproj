@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuickBuy.Dominio\QuickBuy.Dominio.csproj" />
+    <ProjectReference Include="..\QuickBuy.Dominio\SnackHouse.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-import {Component, OnInit } from "@angular/core";
-import { ProdutoServico } from "../../../servicos/produto/pruduto.servico";
-import { Produto } from "../../modelo/produto";
+import { Component, OnInit } from "@angular/core";
+import { LancheServico } from "../../../servicos/lanche/lanche.servico";
+import { Lanche } from "../../modelo/lanches";
 
 @Component({
     selector: "app-loja",
@@ -8,17 +8,17 @@ import { Produto } from "../../modelo/produto";
     styles: ["./loja.pesquisa.component.css"]
 })
 export class LojaPesquisaComponent implements OnInit {
-    public produtos: Produto[];
+    public lanches: Lanche[]; 
 
     ngOnInit(): void {
   
     }
 
-    constructor(private produtoServico: ProdutoServico) {
-        this.produtoServico.obterTodosProdutos()
+    constructor(private produtoServico: LancheServico) {
+        this.produtoServico.obterTodosLanches()
             .subscribe(
-                 produtos => {
-                    this.produtos = produtos;
+                lanches => {
+                    this.lanches = lanches;
               },
                 e => {
                     console.log(e.error);

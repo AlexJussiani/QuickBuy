@@ -38,31 +38,35 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\autorizacao\guarda.rotas.ts" />
+    <None Remove="ClientApp\src\app\ingrediente\ingrediente.component.ts" />
+    <None Remove="ClientApp\src\app\lanches\lanche.componet.ts" />
+    <None Remove="ClientApp\src\app\lanches\pesquisa\pesquisa.lanche.component.ts" />
     <None Remove="ClientApp\src\app\loja\loja.pesquisa.component.ts" />
-    <None Remove="ClientApp\src\app\modelo\produto.ts" />
+    <None Remove="ClientApp\src\app\modelo\ingredientes.ts" />
+    <None Remove="ClientApp\src\app\modelo\ItensLanches.ts" />
+    <None Remove="ClientApp\src\app\modelo\lanches.ts" />
     <None Remove="ClientApp\src\app\modelo\usuario.ts" />
-    <None Remove="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.ts" />
-    <None Remove="ClientApp\src\app\produto\produto.componet.ts" />
     <None Remove="ClientApp\src\app\usuario\cadastro\cadastro.usuario.component.ts" />
     <None Remove="ClientApp\src\app\usuario\login\login.componet.ts" />
-    <None Remove="ClientApp\src\servicos\produto\pruduto.servico.ts" />
+    <None Remove="ClientApp\src\servicos\lanche\ingrediente.servico.ts" />
+    <None Remove="ClientApp\src\servicos\lanche\lanche.servico.ts" />
     <None Remove="ClientApp\src\servicos\usuario\usuario.servico.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuickBuy.Repositorio\QuickBuy.Repositorio.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\autorizacao\guarda.rotas.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\ingrediente\ingrediente.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\loja\pesquisa\loja.pesquisa.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\modelo\produto.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\ingredientes.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\itensLanches.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\lanches.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\modelo\usuario.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\produto\produto.componet.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\lanches\pesquisa\pesquisa.lanche.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\lanches\lanche.componet.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\usuario\cadastro\cadastro.usuario.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\usuario\login\login.componet.ts" />
-    <TypeScriptCompile Include="ClientApp\src\servicos\produto\pruduto.servico.ts" />
+    <TypeScriptCompile Include="ClientApp\src\servicos\ingrediente\ingrediente.servico.ts" />
+    <TypeScriptCompile Include="ClientApp\src\servicos\lanche\lanche.servico.ts" />
     <TypeScriptCompile Include="ClientApp\src\servicos\usuario\usuario.servico.ts" />
   </ItemGroup>
 
@@ -74,6 +78,10 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\arquivos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuickBuy.Repositorio\SnackHouse.Repositorio.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

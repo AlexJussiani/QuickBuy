@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickBuy.Dominio", "QuickBuy.Dominio\QuickBuy.Dominio.csproj", "{CFFEB789-6740-4654-975F-FEBEA98791B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnackHouse.Dominio", "QuickBuy.Dominio\SnackHouse.Dominio.csproj", "{CFFEB789-6740-4654-975F-FEBEA98791B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickBuy.Repositorio", "QuickBuy.Repositorio\QuickBuy.Repositorio.csproj", "{0218CC23-9BD6-4308-B731-C580F6489CE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnackHouse.Repositorio", "QuickBuy.Repositorio\SnackHouse.Repositorio.csproj", "{0218CC23-9BD6-4308-B731-C580F6489CE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickBuy.Web", "QuickBuy.Web\QuickBuy.Web.csproj", "{1DE095D6-92C5-482A-979D-625007BA3FE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnackHouse.Web", "QuickBuy.Web\SnackHouse.Web.csproj", "{1DE095D6-92C5-482A-979D-625007BA3FE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
