@@ -30,6 +30,7 @@ namespace QuickBuy.Repositorio.Contexto
             modelBuilder.ApplyConfiguration(new PedidoConfiguration());
             modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
             modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration());
+            modelBuilder.ApplyConfiguration(new IngredienteConfiguration());
 
             modelBuilder.Entity<FormaPagamento>().HasData(
                 new FormaPagamento()
